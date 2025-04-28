@@ -5,7 +5,7 @@ var canvasColor = '#000000';
 var waveAmount = 100;
 var waveType = ['static','wave1','wave2','wave3'];
 var write = 'write';
-var fontSelect = ['roboto','bebas','cinzel', 'josefin', 'barcode'];
+var fontSelect = ['roboto','bebas','cinzel', 'josefin', 'barcode', 'barbecana'];
 var rotationAmount = 0;
 var outline = false;
 var strokeAmount = 1;
@@ -31,6 +31,7 @@ function preload(){
   cinzel = loadFont('assets/CinzelDecorative-Regular.ttf');
   josefin = loadFont('assets/JosefinSans-ExtraLightItalic.ttf');
   barcode = loadFont('assets/LibreBarcodeEAN13Text-Regular.ttf');
+  barbecana = loadFont('assets/Barbecana-Regular.otf')
   
 }
 
@@ -57,7 +58,7 @@ function draw() {
   push();
   textSize(10);
   noStroke();
-  text('Press ENTER to save your sketch',windowWidth/2,windowHeight - 50);
+  text('Press ENTER to print your sketch',windowWidth/2,windowHeight - 50);
   pop();
 
   textSize(defineSize);
@@ -89,7 +90,7 @@ function draw() {
 
 
 
-   var fontStyle = [roboto, bebas, cinzel, josefin, barcode];
+   var fontStyle = [roboto, bebas, cinzel, josefin, barcode, barbecana];
   //let randomStyle = random(fontStyle);
   var index;
 
@@ -113,6 +114,10 @@ function draw() {
 
             case 'barcode':
               index = 4;
+              break;
+              
+              case 'barbecana':
+              index = 5;
               break;
 
 
