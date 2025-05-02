@@ -5,7 +5,7 @@ var canvasColour = '#000000';
 var waveAmount = 100;
 var waveType = ['static','wave1','wave2','wave3'];
 var write = 'write';
-var fontSelect = ['roboto','Bebas','Cinzel', 'Josefin', 'Barcode', 'Barbecana', 'Connect Nail'];
+var fontSelect = ['roboto','bebas','cinzel', 'josefin', 'barcode', 'barbecana', 'connectnail'];
 var rotationAmount = 0;
 var outline = false;
 var strokeAmount = 1;
@@ -31,6 +31,7 @@ function preload(){
   josefin = loadFont('assets/JosefinSans-ExtraLightItalic.ttf');
   barcode = loadFont('assets/LibreBarcodeEAN13Text-Regular.ttf');
   barbecana = loadFont('assets/Barbecana-Regular.otf');
+  connectnail = loadFont('assets/Connect-Nail.otf')
 }
 
 function setup() {
@@ -72,7 +73,7 @@ function draw() {
       break;
   }
 
-  var fontStyle = [roboto, bebas, cinzel, josefin, barcode, barbecana];
+  var fontStyle = [roboto, bebas, cinzel, josefin, barcode, barbecana, connectnail];
   var index;
 
   switch(fontSelect){
@@ -99,6 +100,10 @@ function draw() {
     case 'barbecana':
       index = 5;
       break;
+
+      case 'connectnail':
+        index = 6;
+        break;
   }
 
   rotate(radians(frameCount * rotationAmount));
